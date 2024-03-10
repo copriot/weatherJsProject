@@ -53,13 +53,13 @@ feeling.textContent = `Hissedilen: ${feels_like.toFixed(1)}C°`
 
     
     .catch(err => console.log(err))
-
-
-}
-
 //input içini boşalt
 cityInput.value = "";
 cityInput.focus();
+
+}
+
+
 
 
 // // Hava durumu bilgisini almak için API URL'si
