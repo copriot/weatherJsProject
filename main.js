@@ -62,30 +62,28 @@ cityInput.focus();
 
 
 
-// // Hava durumu bilgisini almak için API URL'si
-// const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}}&appid=481312607cb8bf2c61497e5bd03888fc`;
+// Hava durumu bilgisini almak için API URL'si
+ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}}&appid=481312607cb8bf2c61497e5bd03888fc`;
 
-// // API'den veriyi çek
-// fetch(apiUrl)
-//   .then(response => response.json())
-//   .then(data => {
-//     // Hava durumu bilgisini al
-//     const weather = data.weather[0].main;
+//  API'den veriyi çek
+ fetch(apiUrl)
+   .then(response => response.json())
+   .then(data => {
+    // Hava durumu bilgisini al
+    const weather = data.weather[0].main;
 
-//     // Arka plan rengini değiştir
-//     switch (weather) {
-//       case 'Clear':
-//         document.body.style.background = 'url(assets/photo-1709589865176-7c6ede164354.avif)';
-//         break;
-//       case 'Clouds':
-//         document.body.style.background = 'url(assets/cloud.avif)';
-//         break;
-//       case 'Rain':
-//         document.body.style.background = 'url(assets/photo-1709589865176-7c6ede164354.avif)';
-//         break;
-//       default:
-//         document.body.style.background = 'url(assets/photo-1709589865176-7c6ede164354.avif)';
-//         break;
-//     }
-//   })
-//   .catch(error => console.error('Hava durumu bilgisi alınamadı:', error));
+    //  Arka plan rengini değiştir
+    switch (weather) {      case 'Clear':
+        document.body.style.backgroundImage = 'url(assets/photo-1709589865176-7c6ede164354.avif)';
+        break;
+      case 'Clouds':
+         document.body.style.backgroundImage = 'url(assets/cloud.avif)';         break;
+      case 'Rain':
+        document.body.style.backgroundImage = 'url(assets/photo-1709589865176-7c6ede164354.avif)';
+         break;
+       default:
+        document.body.style.backgroundImage = 'url(assets/photo-1709589865176-7c6ede164354.avif)';
+        break;
+     }
+   })
+   .catch(error => console.error('Hava durumu bilgisi alınamadı:', error));
